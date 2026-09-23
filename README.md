@@ -15,18 +15,51 @@ The project is designed to run as an unprivileged local service. It does not blo
 
 Low-risk telemetry remains visible in the dashboard and is classified locally. Human review is reserved for high or critical events, malicious classifications, or explicit investigation and containment recommendations.
 
-## Screenshots
+## Product tour
+
+The interface is designed around a short investigation loop: understand the host state, identify what changed, open the evidence, and decide whether a human needs to intervene. The examples below come from a redacted Linux test host.
+
+### Dashboard at a glance
 
 <p align="center">
-  <img src="docs/screenshots/dashboard-overview.png" alt="JevGuard dashboard overview" width="48%">
-  <img src="docs/screenshots/incident-detail.png" alt="JevGuard incident detail" width="48%">
-</p>
-<p align="center">
-  <img src="docs/screenshots/ssh-correlation.png" alt="SSH correlation in JevGuard" width="48%">
-  <img src="docs/screenshots/host-monitoring.png" alt="Host monitoring in JevGuard" width="48%">
+  <a href="docs/screenshots/dashboard-overview.png">
+    <img src="docs/screenshots/dashboard-overview.png" alt="JevGuard dashboard showing security posture, alert counts, and telemetry status" width="92%">
+  </a>
 </p>
 
-The screenshots are redacted examples from a Linux test host. They are included as portfolio material and are not required to run the application.
+<p align="center"><strong>Dashboard overview</strong><br>Security posture, alert volume, AI usage, and the latest activity are visible without leaving the main screen.</p>
+
+### Investigate the evidence
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="docs/screenshots/incident-detail.png"><img src="docs/screenshots/incident-detail.png" alt="JevGuard incident detail with timeline and evidence" width="100%"></a>
+      <p align="center"><strong>Incident detail</strong><br>Review severity, classification, recommendation, and the evidence that produced the alert.</p>
+    </td>
+    <td width="50%" valign="top">
+      <a href="docs/screenshots/ssh-correlation.png"><img src="docs/screenshots/ssh-correlation.png" alt="JevGuard SSH correlation showing failed attempts and a later successful login" width="100%"></a>
+      <p align="center"><strong>SSH correlation</strong><br>Related authentication events are grouped so a failed-login sequence can be assessed as one story.</p>
+    </td>
+  </tr>
+</table>
+
+### Monitor the host
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="docs/screenshots/host-monitoring.png"><img src="docs/screenshots/host-monitoring.png" alt="JevGuard host monitoring with listeners, processes, and system telemetry" width="100%"></a>
+      <p align="center"><strong>Host monitoring</strong><br>Inspect listeners, processes, and local telemetry that support the detection rules.</p>
+    </td>
+    <td width="50%" valign="top">
+      <a href="docs/screenshots/alert-workflow.png"><img src="docs/screenshots/alert-workflow.png" alt="JevGuard alert workflow from collection to classification and review" width="100%"></a>
+      <p align="center"><strong>Alert workflow</strong><br>See how collection, local correlation, bounded AI triage, and human review fit together.</p>
+    </td>
+  </tr>
+</table>
+
+<p align="center"><sub>Click any image to open the full-resolution capture. Screenshots are portfolio material and are not required to run the application.</sub></p>
 
 ## Requirements
 
