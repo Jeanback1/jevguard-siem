@@ -40,7 +40,7 @@ JevGuard works without an AI key. In that mode all decisions use the local deter
 ## Installation
 
 ```bash
-git clone <YOUR_REPOSITORY_URL>
+git clone https://github.com/jeanback1/jevguard-siem.git
 cd jevguard-siem
 python3 -m venv .venv
 source .venv/bin/activate
