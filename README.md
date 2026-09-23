@@ -54,18 +54,13 @@ The interface is designed around a short investigation loop: understand the host
 
 ### Monitor the host
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="docs/screenshots/host-monitoring.png"><img src="docs/screenshots/host-monitoring.png" alt="JevGuard host monitoring with listeners, processes, and system telemetry" width="100%"></a>
-      <p align="center"><strong>Host monitoring</strong><br>Inspect listeners, processes, and local telemetry that support the detection rules.</p>
-    </td>
-    <td width="50%" valign="top">
-      <a href="docs/screenshots/alert-workflow.png"><img src="docs/screenshots/alert-workflow.png" alt="JevGuard alert workflow from collection to classification and review" width="100%"></a>
-      <p align="center"><strong>Alert workflow</strong><br>See how collection, local correlation, bounded AI triage, and human review fit together.</p>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="docs/screenshots/host-monitoring.png">
+    <img src="docs/screenshots/host-monitoring.png" alt="JevGuard host monitoring with listeners, processes, and system telemetry" width="92%">
+  </a>
+</p>
+
+<p align="center"><strong>Host monitoring</strong><br>Inspect listeners, processes, and local telemetry that support the detection rules.</p>
 
 <p align="center"><sub>Click any image to open the full-resolution capture. Screenshots are portfolio material and are not required to run the application.</sub></p>
 
