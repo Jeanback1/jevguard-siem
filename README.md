@@ -1,5 +1,13 @@
 # JevGuard Linux SIEM
 
+<p align="center">
+  <a href="docs/screenshots/audit-20260922-203851.png">
+    <img src="docs/screenshots/audit-20260922-203851.png" alt="JevGuard security monitoring dashboard presentation" width="100%">
+  </a>
+</p>
+
+<p align="center"><strong>Open-source Linux SIEM with deterministic detection, evidence-driven investigation, and bounded AI triage.</strong></p>
+
 JevGuard is a small, open-source SIEM for monitoring one Linux host. It collects local security telemetry, applies deterministic correlation rules, stores the evidence in SQLite, and optionally uses Jev through OpenRouter for bounded triage decisions.
 
 The project is designed to run as an unprivileged local service. It does not block addresses, kill processes, change firewall rules, or execute containment actions automatically.
