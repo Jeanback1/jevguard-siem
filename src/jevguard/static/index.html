@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JevGuard SIEM</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/alerts.css">
+</head>
+<body>
+  <header>
+    <div>
+      <p class="eyebrow">LINUX SECURITY OPERATIONS</p>
+      <h1>JevGuard <span>SIEM</span></h1>
+      <p class="subtitle">Telemetría local, evidencia visible y decisiones acotadas.</p>
+    </div>
+    <div class="status"><i></i><span id="provider">Conectando…</span></div>
+  </header>
+
+  <main>
+    <div id="alert-feed" class="alert-feed" aria-live="polite"></div>
+    <section class="metrics" aria-label="Resumen">
+      <article><span>Eventos</span><strong id="total">0</strong></article>
+      <article><span>Incidentes abiertos</span><strong id="review">0</strong></article>
+      <article><span>Sin acción inmediata</span><strong id="monitored">0</strong></article>
+      <article><span>Riesgo alto</span><strong id="high">0</strong></article>
+      <article><span>Fuentes activas</span><strong id="sources">0</strong></article>
+      <article class="ai-metric"><span>IA hoy</span><strong id="ai-usage">0</strong><small id="ai-usage-detail">llamadas</small></article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div><p class="eyebrow">FLUJO DE INVESTIGACIÓN</p><h2>Eventos recientes</h2></div>
+        <div class="filters">
+          <select id="severity" aria-label="Filtrar por severidad">
+            <option value="">Todas las severidades</option>
+            <option value="critical">Crítica</option><option value="high">Alta</option>
+            <option value="medium">Media</option><option value="low">Baja</option>
+            <option value="informational">Informativa</option>
+          </select>
+          <button id="refresh">Actualizar</button>
+        </div>
+      </div>
+      <div id="error" class="notice hidden"></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Hora</th><th>Señal</th><th>Severidad</th><th>Estado</th><th>Decisión</th><th>Confianza</th><th>Acción</th></tr></thead>
+          <tbody id="events"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="details">
+    <button class="close" aria-label="Cerrar">×</button>
+    <p class="eyebrow">EVIDENCIA DEL INCIDENTE</p>
+    <h2 id="detail-title"></h2>
+    <div id="detail-body"></div>
+  </dialog>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>

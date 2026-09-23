@@ -1,0 +1,11 @@
+## Optional auditd rules for JevGuard. Review before installing.
+## Installation requires root and is intentionally separate from the web app.
+-w /etc/passwd -p wa -k jevguard_identity
+-w /etc/group -p wa -k jevguard_identity
+-w /etc/sudoers -p wa -k jevguard_privilege
+-w /etc/sudoers.d -p wa -k jevguard_privilege
+-w /etc/systemd/system -p wa -k jevguard_persistence
+-w /etc/cron.d -p wa -k jevguard_persistence
+-w /etc/ssh/sshd_config -p wa -k jevguard_ssh
+-a always,exit -F arch=b64 -S execve -F euid=0 -k jevguard_root_exec
+-a always,exit -F arch=b32 -S execve -F euid=0 -k jevguard_root_exec

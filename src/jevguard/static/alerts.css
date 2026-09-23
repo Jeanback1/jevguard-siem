@@ -1,0 +1,28 @@
+.alert-feed {
+  position: fixed;
+  right: 24px;
+  top: 24px;
+  z-index: 20;
+  display: grid;
+  gap: 10px;
+  width: min(420px, calc(100% - 48px));
+}
+
+.alert-toast {
+  text-align: left;
+  background: #271519;
+  border-color: var(--red);
+  box-shadow: 0 12px 40px #0008;
+}
+
+.alert-toast.high,
+.alert-toast.critical { color: #ffd1d1; }
+.status-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+.status-new { color: var(--amber); }
+.status-investigating { color: var(--blue); }
+.status-resolved { color: var(--green); }
+.status-false_positive { color: var(--muted); }
+.metrics { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
+.metrics .ai-metric { min-width: 0; }
+.metrics .ai-metric strong { font-size: clamp(1.6rem, 3vw, 2.2rem); overflow: hidden; text-overflow: ellipsis; }
+.metrics .ai-metric small { display: block; color: var(--muted); font-size: .72rem; margin-top: .35rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
